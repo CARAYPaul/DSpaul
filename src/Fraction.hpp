@@ -32,6 +32,9 @@ class Fraction {
 		void addition(const int add);
 		void addition(const Fraction& ma_fraction);
 
+		void operator+(const Fraction& ma_fraction);
+		void operator+(int operate);
+
 	private:
 		int _numerateur;
 		int _denominateur;
