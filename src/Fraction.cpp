@@ -72,3 +72,13 @@ void Fraction::addition(const Fraction& ma_fraction)
     setNumerateur(n_result);
     setDenominateur(d_result);
 }
+
+void Fraction::operator+(const Fraction& ma_fraction)
+{
+	addition(ma_fraction);
+}
+
+void Fraction::operator+(int operate)
+{
+	addition(operate);
+}
