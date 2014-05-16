@@ -7,11 +7,35 @@
 
 #ifndef FRACTION_HPP_
 #define FRACTION_HPP_
+#include <vector>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
 
 class Fraction {
-public:
-	Fraction();
-	virtual ~Fraction();
+
+	public:
+		Fraction();
+		Fraction(int n, int d);
+
+		string Afficher();
+		string toString(const int nb);
+
+		void addition(int add);
+		void addition(const Fraction&);
+
+
+		// setters & getters
+		const int getNumerateur() const;
+		const int getDenominateur() const;
+		void setNumerateur(const int iNumerateur);
+		void setDenominateur(const int iDenominateur);
+
+	private:
+		int _numerateur;
+		int _denominateur;
 };
 
 #endif /* FRACTION_HPP_ */

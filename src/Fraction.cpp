@@ -6,13 +6,57 @@
  */
 
 #include "Fraction.hpp"
+#include <sstream>
+
 
 Fraction::Fraction() {
-	// TODO Auto-generated constructor stub
+
+}
+Fraction::Fraction(int n, int d)
+{
+	_numerateur = n;
+	_denominateur = d;
+}
+
+const int Fraction::getNumerateur() const
+{
+	return _numerateur;
+}
+
+const int Fraction::getDenominateur() const
+{
+	return _denominateur;
+}
+
+void Fraction::setNumerateur(const int iNumerateur)
+{
+	_numerateur=iNumerateur;
+}
+
+void Fraction::setDenominateur(const int iDenominateur)
+{
+	_denominateur=iDenominateur;
+}
+
+string Fraction::Afficher()
+{
+	string toto = "" + toString(this->_numerateur) + "/" + toString(this->_denominateur);
+	return toto;
+}
+
+void Fraction::addition(int add)
+{
 
 }
 
-Fraction::~Fraction() {
-	// TODO Auto-generated destructor stub
+void Fraction::addition(const Fraction&)
+{
+
 }
 
+string Fraction::toString(const int nb)
+{
+   std::ostringstream oss;
+   oss << nb;
+   return oss.str();
+}
