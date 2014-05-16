@@ -23,15 +23,14 @@ class Fraction {
 		string Afficher();
 		string toString(const int nb);
 
-		void addition(int add);
-		void addition(const Fraction&);
-
-
 		// setters & getters
 		const int getNumerateur() const;
 		const int getDenominateur() const;
 		void setNumerateur(const int iNumerateur);
 		void setDenominateur(const int iDenominateur);
+
+		void addition(const int add);
+		void addition(const Fraction& ma_fraction);
 
 	private:
 		int _numerateur;
